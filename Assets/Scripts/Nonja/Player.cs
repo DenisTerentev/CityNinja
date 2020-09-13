@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    public int health = 5;
     private bool isGround;
     public Transform feetPos;
     public float checkRadeus;
