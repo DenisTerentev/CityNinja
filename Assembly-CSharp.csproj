@@ -55,6 +55,8 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Barrier\BoxBarrier.cs" />
      <Compile Include="Assets\Scripts\Barrier\Spaner.cs" />
+     <Compile Include="Assets\Scripts\Gun\Shuriken.cs" />
+     <Compile Include="Assets\Scripts\Location\Destroer.cs" />
      <Compile Include="Assets\Scripts\Location\Parallax.cs" />
      <Compile Include="Assets\Scripts\Nonja\Player.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
