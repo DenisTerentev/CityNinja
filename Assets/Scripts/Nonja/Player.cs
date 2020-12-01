@@ -15,6 +15,9 @@ public class Player : MonoBehaviour
 
     private Rigidbody2D rb;
     private Animator animator;
+
+    public GameObject effect;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -46,6 +49,12 @@ public class Player : MonoBehaviour
     public void JumpButton()
     {
         isClicked = true;
+    }
+    public int TakeDamage(int damage)
+    {
+        Instantiate(effect, transform.position, Quaternion.identity);
+        health -= damage;
+        return health;
     }
 
 }

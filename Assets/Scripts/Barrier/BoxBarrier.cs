@@ -6,6 +6,8 @@ public class BoxBarrier : MonoBehaviour
 {
     public int damage=1;
     public float speed;
+    public GameObject effect;
+
     private void Update()
     {
         transform.Translate(Vector2.left * speed);
@@ -14,7 +16,9 @@ public class BoxBarrier : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            other.GetComponent<Player>().health -= damage;
+            //other.GetComponent<Player>().health -= damage;
+            other.GetComponent<Player>().TakeDamage(damage);
+            Instantiate(effect, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

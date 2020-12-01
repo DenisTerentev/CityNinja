@@ -10,16 +10,9 @@ public class Shuriken : MonoBehaviour
     public int damage;
     public LayerMask whatIsSolid;
 
-    public Transform shootPoint;
-    private float timeBtwShoots;
-    public float startTimeBtwShoots;
-
     
     private void Update()
     {
-
-
-
         RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, transform.up, distance, whatIsSolid);
         if(hitInfo.collider!=null)
         {
@@ -29,8 +22,10 @@ public class Shuriken : MonoBehaviour
             }
             Destroy(gameObject, lifetime);
         }
-        transform.Translate(Vector2.up * speed * Time.deltaTime);
+        transform.Translate(Vector2.right * speed * Time.deltaTime);
+        //this.transform.Rotate(0, 0, 2.0f);
+        //transform.Rotate(Vector3.fwd, 360 * Time.deltaTime, Space.Self);// не получаеься сделать вращение вокруг своей оси
+
+
     }
-
-
 }
