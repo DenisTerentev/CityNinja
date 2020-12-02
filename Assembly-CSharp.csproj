@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\Location\Destroer.cs" />
      <Compile Include="Assets\Scripts\Location\Parallax.cs" />
      <Compile Include="Assets\Scripts\Nonja\Player.cs" />
+     <Compile Include="Assets\Scripts\Nonja\PlayerAttack.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/Den/Documents/GitHub/CityNinja/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>

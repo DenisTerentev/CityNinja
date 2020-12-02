@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 3734353400301843687}
   - component: {fileID: 2259619185548189907}
   - component: {fileID: 114487740928700578}
+  - component: {fileID: 58511830519474858}
   m_Layer: 0
   m_Name: shuriken
-  m_TagString: Untagged
+  m_TagString: Shuriken
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,12 +95,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  lifetime: 10
   distance: 10
   damage: 1
   whatIsSolid:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
 --- !u!114 &114487740928700578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,3 +113,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifetime: 2
+--- !u!58 &58511830519474858
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7658785410152713529}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 4.35

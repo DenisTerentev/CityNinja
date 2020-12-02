@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -25,6 +26,8 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
+        if (health <= 0) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
         isGround = Physics2D.OverlapCircle(feetPos.position, checkRadeus, whatIsGround);
         if(isGround && isClicked)
         {
