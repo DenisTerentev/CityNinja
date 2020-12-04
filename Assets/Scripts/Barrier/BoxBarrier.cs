@@ -7,6 +7,7 @@ public class BoxBarrier : MonoBehaviour
     public int damage=1;
     public float speed;
     public GameObject effect;
+    public int health;
 
     private void Update()
     {
@@ -28,10 +29,12 @@ public class BoxBarrier : MonoBehaviour
         //    Destroy(gameObject);
         //}
     }
-    public void TakeDamage()
+    public int TakeDamage(int damage)
     {
         Instantiate(effect, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+        health -= damage;
+        if (health <= 0) Destroy(gameObject);
+        return health;
     }
 
 }

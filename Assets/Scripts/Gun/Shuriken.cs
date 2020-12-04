@@ -18,11 +18,12 @@ public class Shuriken : MonoBehaviour
         {
             if(hitInfo.collider.CompareTag("Enemy"))
             {
-                //hitInfo.collider.GetComponent<Enemy>().TakeDamage(damage);
+                hitInfo.collider.GetComponent<Enemy>().TakeDamage(damage);
+                Destroy(gameObject);
             }
             else if (hitInfo.collider.CompareTag("Box"))
             {
-                hitInfo.collider.GetComponent<BoxBarrier>().TakeDamage();
+                hitInfo.collider.GetComponent<BoxBarrier>().TakeDamage(damage);
                 Destroy(gameObject);
             }
             //Destroy(gameObject, lifetime);
