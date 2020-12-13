@@ -5,7 +5,6 @@ using UnityEngine;
 public class Shuriken : MonoBehaviour
 {
     public float speed;
-    //public float lifetime;
     public float distance;
     public int damage;
     public LayerMask whatIsSolid;
@@ -26,11 +25,9 @@ public class Shuriken : MonoBehaviour
                 hitInfo.collider.GetComponent<BoxBarrier>().TakeDamage(damage);
                 Destroy(gameObject);
             }
-            //Destroy(gameObject, lifetime);
         }
         transform.Translate(Vector2.right * speed * Time.deltaTime);
-        //this.transform.Rotate(0, 0, 2.0f);
-        //transform.Rotate(Vector3.fwd, 360 * Time.deltaTime, Space.Self);// не получаеься сделать вращение вокруг своей оси
+        
 
 
     }

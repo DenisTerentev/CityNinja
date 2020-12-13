@@ -12,17 +12,25 @@ public class PlayerAttack : MonoBehaviour
     public int damage;
     public Animator anim;
 
+    private bool isClikkedSword;
+
     private void Update()
     {
         if (timeBtwAttack <= 0)
         {
-            if (Input.GetMouseButton(0))
+            //Input.GetMouseButton(0)
+            if (isClikkedSword)
             {
                 anim.SetTrigger("Attack");
                 timeBtwAttack = startTimeBtwAttack;
+                isClikkedSword = false;
             }
         }
-        else timeBtwAttack -= Time.deltaTime;
+        else
+        {
+            timeBtwAttack -= Time.deltaTime;
+            isClikkedSword = false;
+        }
     }
     private void OnDrawGizmosSelected()
     {
@@ -34,8 +42,22 @@ public class PlayerAttack : MonoBehaviour
         Collider2D[] enemies = Physics2D.OverlapCircleAll(attackPos.position, attackRange, enemy);
         for (int i = 0; i < enemies.Length; i++)
         {
-            enemies[i].GetComponent<BoxBarrier>()?.TakeDamage(damage);
-            enemies[i].GetComponent<Enemy>()?.TakeDamage(damage);
+            if (enemies[i].GetComponent<Enemy>())
+            {
+                enemies[i].GetComponent<Enemy>()?.TakeDamage(damage);
+                break;
+            }
+            else if (enemies[i].GetComponent<BoxBarrier>())
+            {
+                enemies[i].GetComponent<BoxBarrier>()?.TakeDamage(damage);
+                break;
+            }
+            
         }
+    }
+
+    public void SwordClickedButton()
+    {
+        isClikkedSword = true;
     }
 }

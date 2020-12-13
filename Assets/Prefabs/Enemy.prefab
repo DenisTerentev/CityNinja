@@ -152,8 +152,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.23088172, y: 0.6506291}
-  m_Size: {x: 2.7651005, y: 5.741669}
+  m_Offset: {x: 0.29891643, y: 0.6506291}
+  m_Size: {x: 3.8246968, y: 5.741669}
   m_Direction: 0
 --- !u!95 &7015226990397013329
 Animator:
@@ -186,8 +186,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 557c384de5da1f048a461009e413e8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 2
-  damage: 1
+  health: 3
+  damage: 2
   anim: {fileID: 7015226990397013329}
   speed: 0.07
   effect: {fileID: 2074879362009577377, guid: 079dede9a5ff98941a8aaf1a7ebfdf33, type: 3}
@@ -196,7 +196,7 @@ MonoBehaviour:
   attackPos: {fileID: 7015226992276106021}
   playerMask:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 1
   attackRange: 1
   startTimeBtwAttack: 1
 --- !u!114 &114528952753712194

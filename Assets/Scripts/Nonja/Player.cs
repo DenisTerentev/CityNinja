@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public LayerMask whatIsGround;
     public float jumpForse;
     private bool isClicked;
+    public float speed;
 
     private Rigidbody2D rb;
     private Animator animator;
@@ -26,6 +27,7 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
+        CheckPosition(transform.position.x);
         if (health <= 0) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
         isGround = Physics2D.OverlapCircle(feetPos.position, checkRadeus, whatIsGround);
@@ -48,6 +50,10 @@ public class Player : MonoBehaviour
         {
             animator.SetBool("isJumping", true);
         }
+    }
+    public void CheckPosition(float x)
+    {
+        if (x <= -2.7) transform.Translate(Vector2.right * speed);
     }
     public void JumpButton()
     {

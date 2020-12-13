@@ -21,13 +21,13 @@ public class BoxBarrier : MonoBehaviour
             Instantiate(effect, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
-        //else if (other.CompareTag("Shuriken"))
-        //{
+        else if (other.CompareTag("Enemy"))
+        {
 
-        //    Instantiate(effect, transform.position, Quaternion.identity);
-        //    other.GetComponent<Shuriken>().DestroyShuriken();
-        //    Destroy(gameObject);
-        //}
+            Instantiate(effect, transform.position, Quaternion.identity);
+            other.GetComponent<Enemy>().TakeDamage(damage);
+            Destroy(gameObject);
+        }
     }
     public int TakeDamage(int damage)
     {
