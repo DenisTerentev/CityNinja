@@ -19,6 +19,10 @@ public class Enemy : MonoBehaviour
     private float timeBtwAttack;
     public float startTimeBtwAttack;
 
+    public GameObject laughSound;
+    public GameObject takeDamageSound;
+    public GameObject swordSound;
+
   
 
     public void Update()
@@ -44,12 +48,12 @@ public class Enemy : MonoBehaviour
 
     public int TakeDamage(int damage)
     {
+        Instantiate(takeDamageSound, transform.position, Quaternion.identity);
         Instantiate(effect, transform.position, Quaternion.identity);
         health -= damage;
         if (health <= 0)
         {
             Destroy(gameObject);
-
         }
             
         return health;
@@ -57,12 +61,14 @@ public class Enemy : MonoBehaviour
 
     public void EnemyAttack()
     {
+        Instantiate(swordSound, transform.position, Quaternion.identity);
         Collider2D[] enemes = Physics2D.OverlapCircleAll(attackPos.position, attackRange, playerMask);
         for(int i=0;i<enemes.Length;i++)
         {
             enemes[i].GetComponent<Player>()?.TakeDamage(damage);
             enemes[i].GetComponent<BoxBarrier>()?.TakeDamage(damage);
         }
+        Instantiate(laughSound, transform.position, Quaternion.identity);
     }
     private void OnDrawGizmosSelected()
     {

@@ -126,6 +126,8 @@ MonoBehaviour:
   effect: {fileID: 1299462480991874996, guid: 41c593a4adf4deb4aae351be793ea9a1, type: 3}
   health: 2
   hardHP: {fileID: 4344996558671098073, guid: b05f1d1f091fcec4e823ef9cb83bad8c, type: 3}
+  boxSound: {fileID: 6609265144442324329, guid: 25b901e33c2e4df40b4e6d23f23f9d92,
+    type: 3}
 --- !u!114 &1548338840912879425
 MonoBehaviour:
   m_ObjectHideFlags: 0

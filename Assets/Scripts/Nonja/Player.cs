@@ -20,7 +20,9 @@ public class Player : MonoBehaviour
 
     public GameObject effect;
 
-    public GameObject sound;
+    public GameObject musicSound;
+    public GameObject takeDamageSound;
+    public GameObject jumpSound;
 
     private Animator camAnim;
 
@@ -28,7 +30,7 @@ public class Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        Instantiate(sound, transform.position, Quaternion.identity);
+        Instantiate(musicSound, transform.position, Quaternion.identity);
         camAnim = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Animator>();
     }
     private void Update()
@@ -39,6 +41,7 @@ public class Player : MonoBehaviour
         isGround = Physics2D.OverlapCircle(feetPos.position, checkRadeus, whatIsGround);
         if(isGround && isClicked)
         {
+            Instantiate(jumpSound, transform.position, Quaternion.identity);
             rb.velocity = Vector2.up * jumpForse;
             isClicked = false;
             animator.SetTrigger("TakeOff");
@@ -67,6 +70,7 @@ public class Player : MonoBehaviour
     }
     public int TakeDamage(int damage)
     {
+        Instantiate(takeDamageSound, transform.position, Quaternion.identity);
         Instantiate(effect, transform.position, Quaternion.identity);
         health -= damage;
         camAnim.SetTrigger("Shake");

@@ -199,6 +199,12 @@ MonoBehaviour:
     m_Bits: 1
   attackRange: 1
   startTimeBtwAttack: 1
+  laughSound: {fileID: 9011659630138963914, guid: 73e7eb0c9f22ae24ab31b9b695ff9242,
+    type: 3}
+  takeDamageSound: {fileID: 5399959615820051664, guid: 27ad596bd256e2f49b0fd5c503fc2d53,
+    type: 3}
+  swordSound: {fileID: 2963167480558334230, guid: ad84ba6b5e618c540bcefb81eb1da68a,
+    type: 3}
 --- !u!114 &114528952753712194
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,6 +7,9 @@ public class PickUpHP : MonoBehaviour
     public float speed;
     private int hp = 1;
     private Player player;
+
+    public GameObject heartSound;
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
@@ -20,6 +23,7 @@ public class PickUpHP : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             player.TakeHP(hp);
+            Instantiate(heartSound, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }

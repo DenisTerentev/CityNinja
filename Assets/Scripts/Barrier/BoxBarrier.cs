@@ -10,6 +10,8 @@ public class BoxBarrier : MonoBehaviour
     public int health;
     public GameObject hardHP;
 
+    public GameObject boxSound;
+
     private void Update()
     {
         transform.Translate(Vector2.left * speed);
@@ -20,6 +22,7 @@ public class BoxBarrier : MonoBehaviour
         {
             other.GetComponent<Player>().TakeDamage(damage);
             Instantiate(effect, transform.position, Quaternion.identity);
+            Instantiate(boxSound, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
         else if (other.CompareTag("Enemy"))
@@ -27,11 +30,13 @@ public class BoxBarrier : MonoBehaviour
 
             Instantiate(effect, transform.position, Quaternion.identity);
             other.GetComponent<Enemy>().TakeDamage(damage);
+            Instantiate(boxSound, transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
     }
     public int TakeDamage(int damage)
     {
+        Instantiate(boxSound, transform.position, Quaternion.identity);
         Instantiate(effect, transform.position, Quaternion.identity);
         health -= damage;
         if (health <= 0)

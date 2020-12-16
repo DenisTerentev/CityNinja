@@ -111,6 +111,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.05
+  heartSound: {fileID: 7969199186309234569, guid: 862ce882e87acbe42ac4133996be4daf,
+    type: 3}
 --- !u!114 &4344996558671098078
 MonoBehaviour:
   m_ObjectHideFlags: 0
