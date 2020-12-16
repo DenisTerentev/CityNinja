@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    public int health = 5;
+    public int health;
     private bool isGround;
     public Transform feetPos;
     public float checkRadeus;
@@ -63,6 +63,12 @@ public class Player : MonoBehaviour
     {
         Instantiate(effect, transform.position, Quaternion.identity);
         health -= damage;
+        return health;
+    }
+
+    public int TakeHP(int hp)
+    {
+        health += hp;
         return health;
     }
 

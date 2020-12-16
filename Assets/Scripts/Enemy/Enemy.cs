@@ -46,7 +46,12 @@ public class Enemy : MonoBehaviour
     {
         Instantiate(effect, transform.position, Quaternion.identity);
         health -= damage;
-        if (health <= 0) Destroy(gameObject);
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+
+        }
+            
         return health;
     }
 

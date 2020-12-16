@@ -182,6 +182,7 @@ MonoBehaviour:
   speed: 0.05
   effect: {fileID: 1299462480991874996, guid: 41c593a4adf4deb4aae351be793ea9a1, type: 3}
   health: 1
+  hardHP: {fileID: 4344996558671098073, guid: b05f1d1f091fcec4e823ef9cb83bad8c, type: 3}
 --- !u!114 &114946585983752928
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -8,6 +8,7 @@ public class BoxBarrier : MonoBehaviour
     public float speed;
     public GameObject effect;
     public int health;
+    public GameObject hardHP;
 
     private void Update()
     {
@@ -33,7 +34,11 @@ public class BoxBarrier : MonoBehaviour
     {
         Instantiate(effect, transform.position, Quaternion.identity);
         health -= damage;
-        if (health <= 0) Destroy(gameObject);
+        if (health <= 0)
+        {
+            if(Random.Range(1,5)==1) Instantiate(hardHP, transform.position, Quaternion.identity);
+            Destroy(gameObject);
+        }
         return health;
     }
 

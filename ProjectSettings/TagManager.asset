@@ -7,6 +7,7 @@ TagManager:
   - Box
   - Shuriken
   - Enemy
+  - Score
   layers:
   - Default
   - TransparentFX

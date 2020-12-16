@@ -13,12 +13,17 @@ public class PlayerAttack : MonoBehaviour
     public Animator anim;
 
     private bool isClikkedSword;
+    public Score score;
 
+    private void Start()
+    {
+        score = GameObject.FindGameObjectWithTag("Score").GetComponent<Score>();
+    }
+  
     private void Update()
     {
         if (timeBtwAttack <= 0)
         {
-            //Input.GetMouseButton(0)
             if (isClikkedSword)
             {
                 anim.SetTrigger("Attack");
@@ -45,11 +50,13 @@ public class PlayerAttack : MonoBehaviour
             if (enemies[i].GetComponent<Enemy>())
             {
                 enemies[i].GetComponent<Enemy>()?.TakeDamage(damage);
+                score.AddScore(damage);
                 break;
             }
             else if (enemies[i].GetComponent<BoxBarrier>())
             {
                 enemies[i].GetComponent<BoxBarrier>()?.TakeDamage(damage);
+                score.AddScore(damage);
                 break;
             }
             
