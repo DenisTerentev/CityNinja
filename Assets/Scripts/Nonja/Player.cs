@@ -20,10 +20,16 @@ public class Player : MonoBehaviour
 
     public GameObject effect;
 
+    public GameObject sound;
+
+    private Animator camAnim;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        Instantiate(sound, transform.position, Quaternion.identity);
+        camAnim = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Animator>();
     }
     private void Update()
     {
@@ -63,6 +69,7 @@ public class Player : MonoBehaviour
     {
         Instantiate(effect, transform.position, Quaternion.identity);
         health -= damage;
+        camAnim.SetTrigger("Shake");
         return health;
     }
 

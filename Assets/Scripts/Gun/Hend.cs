@@ -15,6 +15,8 @@ public class Hend : MonoBehaviour
 
     private bool isCliccedShuriken;
 
+    public GameObject sound;
+
     void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
@@ -24,10 +26,10 @@ public class Hend : MonoBehaviour
     {
         if (timeBtwShoots <= 0 && inventory.CanUse())
         {
-            //Input.GetMouseButton(1)
             if (isCliccedShuriken)
             {
                 Instantiate(shuriken, pointPlace.position, pointPlace.rotation);
+                Instantiate(sound, transform.position, Quaternion.identity);
                 timeBtwShoots = startTimeBtwShoots;
                 inventory.slots[inventory.LastSlot()].CloseSlot();
                 isCliccedShuriken = false;

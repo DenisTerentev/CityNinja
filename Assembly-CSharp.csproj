@@ -68,7 +68,6 @@
      <Compile Include="Assets\Scripts\Location\Parallax.cs" />
      <Compile Include="Assets\Scripts\Nonja\Player.cs" />
      <Compile Include="Assets\Scripts\Nonja\PlayerAttack.cs" />
-     <None Include="Assets\Fonts\Lecompte\Lecompte.fnt" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/Den/Documents/GitHub/CityNinja/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>

@@ -210,6 +210,7 @@ MonoBehaviour:
     type: 3}
   pointPlace: {fileID: 1088945670}
   startTimeBtwShoots: 1
+  sound: {fileID: 8685080090879515463, guid: 4db12d1a43b67584386cce576192059e, type: 3}
 --- !u!1 &68258497
 GameObject:
   m_ObjectHideFlags: 0
@@ -1253,6 +1254,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1268,6 +1270,25 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!95 &519420030
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 33ecaf80404c3f74b8e6bcbb640783fb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -1441,6 +1462,7 @@ MonoBehaviour:
   jumpForse: 8
   speed: 0.05
   effect: {fileID: 2074879362009577377, guid: 079dede9a5ff98941a8aaf1a7ebfdf33, type: 3}
+  sound: {fileID: 8183681479716432573, guid: 2718dfc848af7c34cab11fa8eec42cfc, type: 3}
 --- !u!114 &555858150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1461,7 +1483,8 @@ MonoBehaviour:
   attackRange: 1.3
   damage: 2
   anim: {fileID: 555858148}
-  score: {fileID: 0}
+  soundAttack: {fileID: 8685080090879515463, guid: 4db12d1a43b67584386cce576192059e,
+    type: 3}
 --- !u!114 &555858151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1571,7 +1594,7 @@ GameObject:
   - component: {fileID: 694808253}
   - component: {fileID: 694808252}
   m_Layer: 5
-  m_Name: Image
+  m_Name: HP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1807,15 +1830,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 26
+    m_Font: {fileID: 12800000, guid: be19ea95dacd83847a621be82eedfd94, type: 3}
+    m_FontSize: 30
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 96
     m_Alignment: 3
     m_AlignByGeometry: 0
-    m_RichText: 1
+    m_RichText: 0
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
@@ -2158,8 +2181,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.6, y: 9.3}
-  m_SizeDelta: {x: 84.27, y: 23.38}
+  m_AnchoredPosition: {x: 1.01, y: 0.83}
+  m_SizeDelta: {x: 89.48, y: 40.31}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1589621788
 MonoBehaviour:
@@ -2180,15 +2203,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 0402b43dea76a434ab34e34eb05c5f50, type: 2}
-    m_FontSize: 50
+    m_Font: {fileID: 12800000, guid: be19ea95dacd83847a621be82eedfd94, type: 3}
+    m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 96
-    m_Alignment: 1
+    m_Alignment: 7
     m_AlignByGeometry: 0
-    m_RichText: 0
+    m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1

@@ -13,7 +13,9 @@ public class PlayerAttack : MonoBehaviour
     public Animator anim;
 
     private bool isClikkedSword;
-    public Score score;
+    private Score score;
+
+    public GameObject soundAttack;
 
     private void Start()
     {
@@ -27,6 +29,7 @@ public class PlayerAttack : MonoBehaviour
             if (isClikkedSword)
             {
                 anim.SetTrigger("Attack");
+                Instantiate(soundAttack, transform.position, Quaternion.identity);
                 timeBtwAttack = startTimeBtwAttack;
                 isClikkedSword = false;
             }
