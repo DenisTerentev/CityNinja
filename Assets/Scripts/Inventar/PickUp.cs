@@ -15,7 +15,7 @@ public class PickUp : MonoBehaviour
     }
     private void Update()
     {
-        transform.Translate(Vector2.left * speed);
+        transform.Translate(Vector2.left * speed*Time.timeScale);
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -28,7 +28,7 @@ public class PickUp : MonoBehaviour
                     inventory.isFull[i] = true;
                     Instantiate(slotButton, inventory.slots[i].transform);
                     Destroy(gameObject);
-                    break;// ошибка, т.к. сначала уничтожает объект, а потом не может выполнить break. Он нужен. Надо подумать, как его можно оставить.
+                    break;
                 }
             }
         }

@@ -14,7 +14,7 @@ public class BoxBarrier : MonoBehaviour
 
     private void Update()
     {
-        transform.Translate(Vector2.left * speed);
+        transform.Translate(Vector2.left * speed*Time.timeScale);
     }
     private void OnTriggerEnter2D(Collider2D other)
     {

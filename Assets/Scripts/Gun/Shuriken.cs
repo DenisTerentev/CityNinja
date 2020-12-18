@@ -33,7 +33,7 @@ public class Shuriken : MonoBehaviour
                 Destroy(gameObject);
             }
         }
-        transform.Translate(Vector2.right * speed * Time.deltaTime);
+        transform.Translate(Vector2.right * speed * Time.deltaTime *Time.timeScale);
         
 
 

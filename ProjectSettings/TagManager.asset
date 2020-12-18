@@ -8,6 +8,8 @@ TagManager:
   - Shuriken
   - Enemy
   - Score
+  - GameManagment
+  - GameMenu
   layers:
   - Default
   - TransparentFX

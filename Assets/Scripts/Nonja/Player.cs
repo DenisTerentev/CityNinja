@@ -62,7 +62,7 @@ public class Player : MonoBehaviour
     }
     public void CheckPosition(float x)
     {
-        if (x <= -2.7) transform.Translate(Vector2.right * speed);
+        if (x <= -2.7) transform.Translate(Vector2.right * speed*Time.timeScale);
     }
     public void JumpButton()
     {

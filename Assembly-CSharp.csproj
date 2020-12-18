@@ -64,8 +64,10 @@
      <Compile Include="Assets\Scripts\Inventar\Inventory.cs" />
      <Compile Include="Assets\Scripts\Inventar\PickUp.cs" />
      <Compile Include="Assets\Scripts\Inventar\Slot.cs" />
+     <Compile Include="Assets\Scripts\Location\Building.cs" />
      <Compile Include="Assets\Scripts\Location\Destroer.cs" />
      <Compile Include="Assets\Scripts\Location\Parallax.cs" />
+     <Compile Include="Assets\Scripts\Menu\GameMenu.cs" />
      <Compile Include="Assets\Scripts\Menu\MainMenu.cs" />
      <Compile Include="Assets\Scripts\Menu\MenuSound.cs" />
      <Compile Include="Assets\Scripts\Nonja\Player.cs" />

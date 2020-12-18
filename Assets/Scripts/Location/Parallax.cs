@@ -9,7 +9,7 @@ public class Parallax : MonoBehaviour
     public float startX;
     private void Update()
     {
-        transform.Translate(Vector2.left * speed * Time.deltaTime);
+        transform.Translate(Vector2.left * speed * Time.deltaTime*Time.timeScale);
         if(transform.position.x<=endX)
         {
             Vector2 pos = new Vector2(startX, transform.position.y);

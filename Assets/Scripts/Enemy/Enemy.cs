@@ -42,7 +42,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            transform.Translate(Vector2.left * speed);
+            transform.Translate(Vector2.left * speed*Time.timeScale);
         }
     }
 
