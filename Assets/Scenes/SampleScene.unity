@@ -325,7 +325,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -262.99994, y: -66.80597}
+  m_AnchoredPosition: {x: 133, y: 112}
   m_SizeDelta: {x: 70, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &102203293
@@ -594,10 +594,10 @@ RectTransform:
   m_Father: {fileID: 334936584}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 126}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &268695980
 GameObject:
@@ -780,6 +780,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManagment: {fileID: 201652556}
   gameMenu: {fileID: 656420133}
+  player: {fileID: 555858144}
 --- !u!1 &363691450
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,7 +1002,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -307, y: -7.805954}
+  m_AnchoredPosition: {x: 68, y: 171}
   m_SizeDelta: {x: 70, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &465904547
@@ -1126,7 +1127,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 403.8, y: -184.90598}
+  m_AnchoredPosition: {x: 403.8, y: -251.1}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &470058875
@@ -1250,7 +1251,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 273.99994, y: -34.80597}
+  m_AnchoredPosition: {x: -65, y: 115}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &483316131
@@ -1639,7 +1640,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.199997, y: -0.7999878}
+  m_AnchoredPosition: {x: -1.2000122, y: -0.7999878}
   m_SizeDelta: {x: 707.6, y: 225.20001}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &550315132
@@ -1715,6 +1716,7 @@ GameObject:
   - component: {fileID: 555858149}
   - component: {fileID: 555858150}
   - component: {fileID: 555858151}
+  - component: {fileID: 555858152}
   m_Layer: 0
   m_Name: Ninja
   m_TagString: Player
@@ -1823,6 +1825,7 @@ MonoBehaviour:
     type: 3}
   jumpSound: {fileID: 7960975474984600448, guid: 5f6ea9f0ef90fe44dba03473acdc56ea,
     type: 3}
+  canvas: {fileID: 334936580}
 --- !u!114 &555858150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1862,6 +1865,18 @@ MonoBehaviour:
   - {fileID: 772884746}
   - {fileID: 128676521}
   - {fileID: 1637467077}
+--- !u!114 &555858152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555858144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46c0d9a5e43760046b41eb22de37bdbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &656135162
 GameObject:
   m_ObjectHideFlags: 0
@@ -2013,7 +2028,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -273.89993, y: 43.20597}
+  m_AnchoredPosition: {x: 82, y: -133}
   m_SizeDelta: {x: 112.1, y: 105.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &694808252
@@ -2034,7 +2049,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b2cd0dfd0fd720f44a92dd184c63d7d8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9825617456ec3234bb08cc725ed3895b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2171,7 +2186,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 403.8, y: -94.905975}
+  m_AnchoredPosition: {x: 403.8, y: -161.1}
   m_SizeDelta: {x: 109.4, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &775246375
@@ -2358,7 +2373,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 86.7, y: 74}
+  m_AnchoredPosition: {x: -210, y: -121}
   m_SizeDelta: {x: 187, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &976036804
@@ -2693,7 +2708,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -44.19403}
+  m_AnchoredPosition: {x: 58, y: -240}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1588573362
@@ -2731,7 +2746,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 265, y: 71}
+  m_AnchoredPosition: {x: -83, y: -121}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1588573364
@@ -3034,7 +3049,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 403.8, y: -139.90598}
+  m_AnchoredPosition: {x: 403.8, y: -206.1}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1732611477
@@ -3159,7 +3174,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 403.8, y: -229.90598}
+  m_AnchoredPosition: {x: 403.8, y: -296.1}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1760664303
@@ -3553,6 +3568,8 @@ MonoBehaviour:
   box: {fileID: 4411040008429976998, guid: 2872772750048af40aa61da52f408373, type: 3}
   box2: {fileID: 1548338840912879428, guid: ea8d7991cfc66464a87b1ade28044922, type: 3}
   enemy: {fileID: 7015226990397013341, guid: 2c574a041998ad54dbc6c796291d988d, type: 3}
+  mainEnemy: {fileID: 4785887248301502103, guid: ca732e4edb3be4f418f4c08f7898c321,
+    type: 3}
   shuriken: {fileID: 2994725826148037993, guid: 2e69fd362e1a9e84ab00e93accc0fa50,
     type: 3}
   startTimeBtwSpawn: 7.5

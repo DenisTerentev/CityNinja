@@ -16,5 +16,9 @@ public class Score : MonoBehaviour
         score += scr;
         return score;
     }
+    public int GetScore()
+    {
+        return score;
+    }
 
 }

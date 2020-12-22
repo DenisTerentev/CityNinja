@@ -28,10 +28,11 @@ public class Enemy : MonoBehaviour
     public void Update()
     {
         RaycastHit2D hit = Physics2D.Raycast(seePoint.transform.position, seePoint.transform.right, distance);
-        if(hit.collider?.gameObject.GetComponent<Player>())
+        if (hit.collider?.gameObject.GetComponent<Player>())
         {
             if(timeBtwAttack<=0)
             {
+                
                 anim.SetTrigger("Attack");
                 timeBtwAttack = startTimeBtwAttack;
             }

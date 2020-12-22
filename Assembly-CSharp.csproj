@@ -70,6 +70,8 @@
      <Compile Include="Assets\Scripts\Menu\GameMenu.cs" />
      <Compile Include="Assets\Scripts\Menu\MainMenu.cs" />
      <Compile Include="Assets\Scripts\Menu\MenuSound.cs" />
+     <Compile Include="Assets\Scripts\Menu\SaveManager.cs" />
+     <Compile Include="Assets\Scripts\Menu\ShowScore.cs" />
      <Compile Include="Assets\Scripts\Nonja\Player.cs" />
      <Compile Include="Assets\Scripts\Nonja\PlayerAttack.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">

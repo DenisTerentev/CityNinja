@@ -26,17 +26,30 @@ public class Player : MonoBehaviour
 
     private Animator camAnim;
 
+    public GameObject canvas;
+    private Score score;
+    private SaveManager saveManager;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         Instantiate(musicSound, transform.position, Quaternion.identity);
         camAnim = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Animator>();
+        score = GameObject.FindGameObjectWithTag("Score").GetComponent<Score>();
+        saveManager = GetComponent<SaveManager>();
     }
     private void Update()
     {
         CheckPosition(transform.position.x);
-        if (health <= 0) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        if (health <= 0)
+        {
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            canvas.GetComponent<GameMenu>().ClickedPause();
+            SaveScore();
+
+        }
+            
 
         isGround = Physics2D.OverlapCircle(feetPos.position, checkRadeus, whatIsGround);
         if(isGround && isClicked)
@@ -81,6 +94,14 @@ public class Player : MonoBehaviour
     {
         health += hp;
         return health;
+    }
+    public void SaveScore()
+    {
+        if (saveManager.Load() < score.GetScore())
+        {
+            saveManager.SetScore(score.GetScore());
+            saveManager.Save();
+        }
     }
 
 }
